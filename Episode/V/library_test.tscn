@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds8fmsfnwcpvu"]
+
+[ext_resource type="Shader" path="res://Episode/V/library_test.gdshader" id="1_mcskg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_07fq7"]
+shader = ExtResource("1_mcskg")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_bqoqr"]
+
+[node name="LibraryTest" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_07fq7")
+scale = Vector2(100, 100)
+texture = SubResource("CanvasTexture_bqoqr")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://cteml8n51fl0x"]
+
+[ext_resource type="Shader" path="res://Episode/IV/alpha_test.gdshader" id="1_071tw"]
+[ext_resource type="Texture2D" uid="uid://dr3xu8ri0l80c" path="res://Episode/IV/alpha_curve_texture.tres" id="2_hycsy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3u4na"]
+shader = ExtResource("1_071tw")
+shader_parameter/curve = ExtResource("2_hycsy")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_dbo2j"]
+
+[node name="AlphaTest" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_3u4na")
+scale = Vector2(100, 100)
+texture = SubResource("CanvasTexture_dbo2j")

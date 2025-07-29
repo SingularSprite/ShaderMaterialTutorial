@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci7a3vjut414x"]
+
+[ext_resource type="Shader" path="res://Episode/III/color_test.gdshader" id="1_s2mw8"]
+[ext_resource type="Texture2D" uid="uid://eigvinrrckjs" path="res://Episode/III/triangle_gradient_texture_1d.tres" id="2_8ver0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i66ve"]
+shader = ExtResource("1_s2mw8")
+shader_parameter/color_0 = Color(0, 0.901961, 0.839216, 1)
+shader_parameter/color_1 = Color(0.807843, 1, 0.0901961, 1)
+shader_parameter/gradient_texture = ExtResource("2_8ver0")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_a7036"]
+
+[node name="ColorTest" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_i66ve")
+scale = Vector2(100, 100)
+texture = SubResource("CanvasTexture_a7036")
+
+[node name="Camera2D" type="Camera2D" parent="."]

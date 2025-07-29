@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://drkih153suwlu"]
+
+[ext_resource type="Shader" path="res://Episode/IV/exercise.gdshader" id="1_d6oje"]
+[ext_resource type="Texture2D" uid="uid://sn7hp1uyys2i" path="res://Episode/IV/bubble_curve_texture.tres" id="2_dtqhn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_em2nc"]
+shader = ExtResource("1_d6oje")
+shader_parameter/curve = ExtResource("2_dtqhn")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_edc6m"]
+
+[node name="Exercise" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_em2nc")
+scale = Vector2(100, 100)
+texture = SubResource("CanvasTexture_edc6m")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm4krp80mmq3y"]
+
+[ext_resource type="Shader" path="res://Test/test.gdshader" id="1_2j42v"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f5bld"]
+shader = ExtResource("1_2j42v")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_bsqra"]
+
+[node name="Test" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_f5bld")
+scale = Vector2(100, 100)
+texture = SubResource("CanvasTexture_bsqra")
